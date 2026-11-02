@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>特斯拉授权回调</title>
+<style>body{font-family:-apple-system,sans-serif;padding:24px;line-height:1.6}textarea{width:100%;height:110px;font-size:13px}button{font-size:17px;padding:12px 22px;margin-top:12px}</style></head>
+<body>
+<h2>授权完成</h2>
+<p>请把下面这一整段网址复制下来，发给 Muse（M60）。这是最后一步，越快越好。</p>
+<textarea id="u" readonly></textarea>
+<br><button onclick="c()">复制网址</button>
+<script>
+document.getElementById('u').value = window.location.href;
+function c(){var t=document.getElementById('u');t.select();document.execCommand('copy');navigator.clipboard&&navigator.clipboard.writeText(t.value);alert('已复制，发给 M60 就行');}
+</script>
+</body>
+</html>
